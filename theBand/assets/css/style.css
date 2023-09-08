@@ -99,6 +99,7 @@ html {
     left: 0;
     right: 0;
     z-index: 1;
+    overflow: hidden;
 }
 
 
@@ -128,7 +129,7 @@ html {
     text-decoration: none;
     line-height: 46px;
     padding: 0 24px;
-    font-size: 16px;
+    font-size: 12px;
 }
 
 #nav .subnav li:hover a,
@@ -164,18 +165,29 @@ html {
 }
 
 /* Header */
+
+#header .mobile-menu-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: none;
+}
+
+#header .mobile-menu-btn,
 #header .search-btn {
     float: right;
     padding: 0 21px;
     cursor: pointer;
 }
 
+#header .mobile-menu-btn:hover,
 #header .search-btn:hover {
     color: rgb(255, 0, 0);
     background-color: #a3a3a3;
     border-radius: 10px;
 }
 
+#header .menu-icon,
 #header .search-icon {
     color: #fff;
     font-size: 16px;
@@ -219,9 +231,12 @@ html {
 
 #content .content-section {
     width: 800px;
+    max-width: 100%;
     padding: 64px 0 112px;
     margin-left: auto;
     margin-right: auto;
+    padding-left: 16px;
+    padding-right: 16px;
 }
 
 #content .section-heading {
@@ -262,7 +277,7 @@ html {
     border-radius: 10%;
 }
 
-#content .member-img1{
+#content .member-img1 {
     width: 200px;
     margin-top: 15px;
     border-radius: 10%;

@@ -18,10 +18,36 @@ for (const byBtn of byBtns) {
     byBtn.addEventListener('click', showByTickets);
 }
 // lắng nghe sự kiện click vào button
-    modalClose.addEventListener('click',closeByTickets);
+modalClose.addEventListener('click', closeByTickets);
 
-    modal.addEventListener('click', closeByTickets)
+modal.addEventListener('click', closeByTickets)
 
-    modalContainer.addEventListener('click',function(e) {
-        e.stopPropagation();
-    });
+modalContainer.addEventListener('click', function (e) {
+    e.stopPropagation();
+});
+
+
+// mobile-menu
+var header = document.getElementById('header');
+var mobileMenu = document.getElementById('mobile-menu');
+var headerHighr = header.clientHeight;
+
+// Đóng mở menu mobile
+mobileMenu.onclick = function () {
+    var isClose = header.clientHeight === headerHighr;
+    if (isClose) {
+        header.style.height = 'auto';
+    } else {
+        header.style.height = null;
+    }
+}
+
+// Tự động đóng menu sau khi chọn
+var menuItems = document.querySelectorAll('#nav li a[href*="#"]');
+// Lặp qua tất cả thẻ a có trong danh sách
+for (var i = 0; i < menuItems.length; i++) {
+    var menuItem = menuItems[i];
+    menuItem.onclick = function () {
+        header.style.height = null;
+    }
+}
