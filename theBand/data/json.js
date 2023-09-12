@@ -47,7 +47,14 @@ var menuItems = document.querySelectorAll('#nav li a[href*="#"]');
 // Lặp qua tất cả thẻ a có trong danh sách
 for (var i = 0; i < menuItems.length; i++) {
     var menuItem = menuItems[i];
-    menuItem.onclick = function () {
-        header.style.height = null;
+    
+    
+    menuItem.onclick = function (e) {
+        var isParentMenu = this.nextElementSibling && this.nextElementSibling.classList.contains('subnav');
+        if(isParentMenu){
+            e.preventDefault();
+        }else{
+            header.style.height = null;
+        }
     }
 }

@@ -99,7 +99,6 @@ html {
     left: 0;
     right: 0;
     z-index: 1;
-    overflow: hidden;
 }
 
 
@@ -110,6 +109,7 @@ html {
 #nav,
 .subnav {
     list-style: none;
+    border-radius: 10px;
 }
 
 #nav>li {
@@ -262,7 +262,7 @@ html {
 }
 
 #content .members-list {
-    margin-top: 48px;
+    margin-top: 32px;
 
 }
 
@@ -328,7 +328,7 @@ html {
 
 /* Places */
 .places-list {
-    margin-top: 32px;
+    margin-top: 16px;
 }
 
 .place-img {
