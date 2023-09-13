@@ -6,6 +6,12 @@
 
 /* Mobile */
 @media (max-width: 740px) {
+    .s-full-width{
+        width: 100% !important;
+    }
+    .s-mt-8{
+        margin-top: 8px;
+    }
     #header {
         overflow: hidden;
     }
@@ -51,5 +57,8 @@
     }
     .s-col-full {
         width: 100%;
+    }
+    .contact-form{
+        margin-top: 16px;
     }
 }
